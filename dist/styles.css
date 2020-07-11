@@ -19,6 +19,7 @@ body{
     justify-content: space-between;
     border: 2px solid var(--primary);
     border-radius: 5px;
+    text-shadow: rgb(185, 233, 247) 2px 2px;
 }
 
 .body{
@@ -31,8 +32,34 @@ body{
     border-radius: 5px;
 }
 
+img {
+    margin: 0px;
+}
+
+#pazzo{
+    display: inline-block;
+    width: 25%;
+   
+}
+
 .nav{
     display: flex;
     width: 200px;
     justify-content: space-around;
+}
+
+
+ul{
+    padding: 0px;
+}
+
+li{
+    font-size: 22px;
+    list-style-type: none;
+    border-bottom: 2px solid transparent;
+}
+
+li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid var(--primary);
 }

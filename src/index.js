@@ -1,7 +1,7 @@
 import {loadHeader} from './header';
 import {loadBody} from './body';
 
-loadHeader();
-loadBody();
+//loadHeader();
+//loadBody();
 
 console.log('index.js')
