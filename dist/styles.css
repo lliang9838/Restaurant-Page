@@ -61,9 +61,14 @@ img {
 }
 
 .nav-link:hover {
+    cursor: pointer;
     border-bottom: 2px solid var(--primary);
 }
 
 .nav-link:active {
     color: var(--primary);
+}
+
+.active-link{
+    border-bottom: 2px solid var(--primary);
 }
