@@ -46,20 +46,24 @@ img {
     display: flex;
     width: 200px;
     justify-content: space-around;
+    
 }
 
-
-ul{
-    padding: 0px;
+.text-shadow{
+    text-shadow: rgb(185, 233, 247) 2px 2px;
 }
 
-li{
+.nav-link {
     font-size: 22px;
-    list-style-type: none;
+    text-decoration: none;
+     color: var(--primary);
     border-bottom: 2px solid transparent;
 }
 
-li:hover{
-    cursor: pointer;
+.nav-link:hover {
     border-bottom: 2px solid var(--primary);
+}
+
+.nav-link:active {
+    color: var(--primary);
 }
