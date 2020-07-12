@@ -8,6 +8,10 @@ body{
     font-family: "Unica One";
 }
 
+#content{
+    height: auto;
+}
+
 .header{
     width: 825px;
     height: 80px;
@@ -24,7 +28,7 @@ body{
 
 .body{
     width: 825px;
-    height: 1000px;
+    /* height: 1000px; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -34,6 +38,7 @@ body{
 
 img {
     margin: 0px;
+    border-radius: 5px;
 }
 
 #pazzo{
@@ -71,4 +76,20 @@ img {
 
 .active-link{
     border-bottom: 2px solid var(--primary);
+}
+
+#intro{
+    padding: 20px;
+    display: flex;
+    text-shadow: rgb(185, 233, 247) 2px 2px;
+}
+
+#pepperoni{
+    width: 50%;
+}
+
+#about{
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
 }

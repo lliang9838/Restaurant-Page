@@ -2,14 +2,14 @@ import {loadHeader} from './header';
 import {loadHome, loadMenu, loadContact} from './body';
 import {elements} from './base';
 
-loadHeader();
-loadHome();
+// loadHeader();
+// loadHome();
 
 console.log('index.js');
 
 elements.content.addEventListener('click', e => {
   console.log('yoo')
-  e.preventDefault();
+  // e.preventDefault();
   if(e.target.matches('.home, .home *')){
     elements.content.innerHTML = '';
     loadHeader();
