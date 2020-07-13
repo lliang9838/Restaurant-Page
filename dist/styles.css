@@ -23,7 +23,7 @@ body{
     justify-content: space-between;
     border: 2px solid var(--primary);
     border-radius: 5px;
-    text-shadow: rgb(185, 233, 247) 2px 2px;
+    text-shadow: rgb(185, 233, 247) 1px 1px;
 }
 
 .body{
@@ -51,10 +51,6 @@ img {
     width: 200px;
     justify-content: space-around;
     
-}
-
-.text-shadow{
-    text-shadow: rgb(185, 233, 247) 2px 2px;
 }
 
 .nav-link {
