@@ -27,7 +27,8 @@ export const  loadHome = () => {
               This is a programming exercise made by <a target="_blank" rel="noopener noreferrer" href="https://leslieliang.dev/" 
               style="background-color: rgb(185, 233, 247); text-decoration: none; color: var(--primary);">Leslie Liang</a> and in no
               way is he representing Pazzo Pizzeria. <span style="background-color: rgb(250, 215, 195)">DOM Manipulation,
-              Vanilla JavaScript, HTML, CSS and Flexboxes</span> were used in this project. Web design was inspired by 
+              Vanilla JavaScript, HTML, CSS and Flexboxes</span> were used in this project. Compiled using webpack and deployed on Firebase. 
+              Web design was inspired by 
               <a target="_blank" rel="noopener noreferrer" href="https://hridaykedia.github.io/Restaurant/#"
                 style="background-color: rgb(185, 233, 247); text-decoration: none; color: var(--primary);">@hridaykedia</a>
             <p>
@@ -38,12 +39,44 @@ export const  loadHome = () => {
 }
 
 export const  loadMenu = () => {
-  console.log('loading home');
-  
-  const markup=
-  `<div class="body"><p>menu</p></div>`
+  console.log('loading menu');
 
-  elements.content.insertAdjacentHTML('beforeend', markup)
+  const markup=
+  `<div class="body">
+        <div class="menu-section">
+          <div class="dish">
+            <div class="dish-header">
+              <div>
+                <h2><span id="pizza_arrow_down" style="font-size: 32px; cursor: pointer;" class="material-icons">
+                  arrow_drop_down
+                </span>New York Style Pizza</h2>
+              </div>
+              <div class="price">
+                <h3>$</h3>
+                <h4>22</h4>
+              </div>
+            </div>
+            <div class="pizza-dish">
+              <img style="width: 100%" src='./img/pazzo.jpeg' alt="pazzo pizzeria">
+            </div>
+            <div style="margin-top: 20px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.
+            </div>
+          </div>
+        </div>
+      </div>`
+
+
+  elements.content.insertAdjacentHTML('beforeend', markup);
+
+
+  const pizza = document.querySelector('#pizza_arrow_down');
+  pizza.addEventListener('click', e=> {
+    console.log('pizza arrow down clicked');
+  });
+  console.log('pizza: ', pizza);
+  
 }
 
 export const  loadContact = () => {

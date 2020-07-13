@@ -8,8 +8,6 @@ import {elements} from './base';
 console.log('index.js');
 
 elements.content.addEventListener('click', e => {
-  console.log('yoo')
-  // e.preventDefault();
   if(e.target.matches('.home, .home *')){
     elements.content.innerHTML = '';
     loadHeader();
@@ -29,22 +27,12 @@ elements.content.addEventListener('click', e => {
     loadHeader();
     loadContact();
     document.querySelector('.contact').classList.add('active-link');
-  }
-    
+  } 
 });
 
-// elements.menu.addEventListener('click', e => {
-//     e.preventDefault();
-//     console.log('menu was clicked');
-//     elements.content.innerHTML = '';
-//     loadHeader();
-//     loadMenu();
-// });
-
-// elements.contact.addEventListener('click', e => {
-//     e.preventDefault();
-//     console.log('contact was clicked');
-//     elements.content.innerHTML = '';
-//     loadHeader();
-//     loadContact();
-// });
+const pizza = document.querySelector('#pizza_arrow_down');
+  pizza.addEventListener('click', e => {
+    pizza.textContent = pizza.textContent === "arrow_drop_down" ? "arrow_drop_up": "arrow_drop_down";
+    document.querySelector('.pizza-dish').style.display =
+    document.querySelector('.pizza-dish').style.display === "block" ? "none" : "block";
+  });
