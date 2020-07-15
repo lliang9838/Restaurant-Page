@@ -1,7 +1,6 @@
 import {elements} from './base';
 
 export const  loadHeader = () => {
-  console.log('loading header');
   
   const markup=
    `<div class="header">
@@ -21,6 +20,6 @@ export const  loadHeader = () => {
       </div>
     `
 
-  elements.content.insertAdjacentHTML('beforeend', markup)
+  elements.content.insertAdjacentHTML('beforeend', markup);
 }
 

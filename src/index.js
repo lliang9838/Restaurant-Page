@@ -2,10 +2,8 @@ import {loadHeader} from './header';
 import {loadHome, loadMenu, loadContact} from './body';
 import {elements} from './base';
 
-// loadHeader();
-// loadHome();
-
-console.log('index.js');
+loadHeader();
+loadHome();
 
 elements.content.addEventListener('click', e => {
   if(e.target.matches('.home, .home *')){

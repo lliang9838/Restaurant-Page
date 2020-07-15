@@ -6,6 +6,7 @@ html {
 body{
     background-color: var(--background-color);
     font-family: "Unica One";
+    color: var(--primary);
 }
 
 #content{
@@ -100,7 +101,6 @@ img {
 
 .dish-header{
     display: flex;
-    /* background-color: rgb(246, 250, 173); */
     font-size: 26px;
     border-radius: 10px;
     align-items: center;

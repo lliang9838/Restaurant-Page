@@ -1,7 +1,6 @@
 import {elements} from './base';
 
 export const  loadHome = () => {
-  console.log('loading home');
   
   const markup=
   `<div class="body">
@@ -35,11 +34,11 @@ export const  loadHome = () => {
         </div>
     </div>`
 
-  elements.content.insertAdjacentHTML('beforeend', markup)
+  elements.content.insertAdjacentHTML('beforeend', markup);
+  document.querySelector('.home').classList.add('active-link');
 }
 
 export const  loadMenu = () => {
-  console.log('loading menu');
 
   const markup=
   `<div class="body">
@@ -112,7 +111,6 @@ export const  loadMenu = () => {
 
   elements.content.insertAdjacentHTML('beforeend', markup);
 
-
   const dishes = document.querySelectorAll('#pizza_arrow_down');
 
   dishes.forEach((dish) => {
@@ -120,7 +118,6 @@ export const  loadMenu = () => {
         dish.textContent = dish.textContent === "arrow_drop_down" ? "arrow_drop_up": "arrow_drop_down";
 
         let image = dish.parentElement.parentElement.parentElement.parentElement.childNodes[3];
-        
         image.style.display =
         image.style.display === "block" ? "none" : "block";
     });
@@ -129,10 +126,44 @@ export const  loadMenu = () => {
 }
 
 export const  loadContact = () => {
-  console.log('loading contact');
-  
-  const markup=
-  `<div class="body"><p>contact</p></div>`
 
-  elements.content.insertAdjacentHTML('beforeend', markup)
+  const markup=
+  `
+  <div class="body">
+    <div id="about">
+      <div>
+        <div style="display: inline-block"> 
+          <span style="font-size: 28px;">Delivery and Pickup</span>
+          <br>
+          <span style="font-size: 28px; background-color: rgb(185, 233, 247);">Monday - Sunday</span>
+          <br>
+          <span style="font-size: 28px;">From 10AM to 10PM</span>
+        </div>
+      </div>
+      <div>
+        <div style="display: inline-block; margin-top: 60px;">
+          <span style="font-size: 32px;">Place Your Order</span>
+          <br>
+          <a target="_blank" rel="noopener noreferrer" href="https://leslieliang.dev"
+            style="background-color: rgb(185, 233, 247); 
+            text-decoration: none; color: var(--primary); font-size: 30px;">Online</a>
+          <br>
+          <span style="font-size: 28px; background-color: rgb(185, 233, 247);">Or On Instagram</span>
+          <br>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/bigballerleslie/" 
+          style="text-decoration: none; color: var(--primary); font-size: 30px;">@bigballerleslie</a>
+        </div>
+      </div>
+      <div>
+        <div style="display: inline-block; margin-top: 60px; margin-bottom: 80px;">
+          <span style="font-size: 26px;">Order Placing From </span>
+          <br>
+          <span style="font-size: 26px; background-color: rgb(250, 215, 195);">Monday 'Til Friday 3pm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+
+  elements.content.insertAdjacentHTML('beforeend', markup);
 }
