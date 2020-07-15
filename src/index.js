@@ -30,9 +30,5 @@ elements.content.addEventListener('click', e => {
   } 
 });
 
-const pizza = document.querySelector('#pizza_arrow_down');
-  pizza.addEventListener('click', e => {
-    pizza.textContent = pizza.textContent === "arrow_drop_down" ? "arrow_drop_up": "arrow_drop_down";
-    document.querySelector('.pizza-dish').style.display =
-    document.querySelector('.pizza-dish').style.display === "block" ? "none" : "block";
-  });
+
+  

@@ -13,7 +13,7 @@ export const  loadHome = () => {
             <h1 style="font-size: 24px;">Who are we?</h1>
             <p style="font-family: Comfortaa; padding: 0 20px; display: inline-block; margin: 0px;">
               <span style="background-color: rgb(246, 250, 173)">Pazzo Pizzeria</span> is a family owned chain restaurant who offers authentic 
-              Italian food. The dough is prepared every morning meaning you will always be getting the cream of the crop every time you step 
+              Italian food. The dough is prepared every morning meaning you will always get the cream of the crop every time you step 
               into the restaurant. Handmade pizza, pasta and sandwiches guarantees you with a 
               <span style="background-color: rgb(246, 250, 173)">smile</span> after every <span style="background-color: rgb(246, 250, 173)">
               meal</span>.<p>
@@ -30,7 +30,7 @@ export const  loadHome = () => {
               Vanilla JavaScript, HTML, CSS and Flexboxes</span> were used in this project. Compiled using webpack and deployed on Firebase. 
               Web design was inspired by 
               <a target="_blank" rel="noopener noreferrer" href="https://hridaykedia.github.io/Restaurant/#"
-                style="background-color: rgb(185, 233, 247); text-decoration: none; color: var(--primary);">@hridaykedia</a>
+                style="background-color: rgb(185, 233, 247); text-decoration: none; color: var(--primary);">@hridaykedia</a>.
             <p>
         </div>
     </div>`
@@ -45,11 +45,11 @@ export const  loadMenu = () => {
   `<div class="body">
         <div class="menu-section">
           <div class="dish">
-            <div class="dish-header">
+            <div style="background-color: rgb(246, 250, 173);" class="dish-header">
               <div>
                 <h2><span id="pizza_arrow_down" style="font-size: 32px; cursor: pointer;" class="material-icons">
                   arrow_drop_down
-                </span>New York Style Pizza</h2>
+                </span>Neopolitan Style Pizza</h2>
               </div>
               <div class="price">
                 <h3>$</h3>
@@ -57,25 +57,74 @@ export const  loadMenu = () => {
               </div>
             </div>
             <div class="pizza-dish">
-              <img style="width: 100%" src='./img/pazzo.jpeg' alt="pazzo pizzeria">
+              <img style="width: 100%; border-radius: 15px;" src='./img/neopolitan.jpg' alt="pazzo pizzeria">
             </div>
-            <div style="margin-top: 20px">
+            <div style="margin-top: 20px; font-family: Comfortaa;">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.
+              aliqua. Sed nec faucibus magna. Vestibulum elementum porta sagittis. Pellentesque malesuada tortor ut risus euismod
+              sollicitudin.
+            </div>
+          </div>
+          <div class="dish" style="margin-top: 30px;" >
+            <div style="background-color: rgb(250, 215, 195);" class="dish-header">
+              <div>
+                <h2><span id="pizza_arrow_down" style="font-size: 32px; cursor: pointer;" class="material-icons">
+                    arrow_drop_down
+                  </span>California Style Pizza</h2>
+              </div>
+              <div class="price">
+                <h3>$</h3>
+                <h4>22</h4>
+              </div>
+            </div>
+            <div class="pizza-dish">
+              <img style="width: 100%; border-radius: 15px;" src='./img/california.jpg' alt="pazzo pizzeria">
+            </div>
+            <div style="margin-top: 20px; font-family: Comfortaa;">
+              Nulla rhoncus arcu sit amet mauris blandit, ut consequat elit consectetur. Duis sed fringilla est, et viverra quam. Nam
+              nec sodales augue. Suspendisse sapien nulla, pulvinar et imperdiet eu, cursus quis ante. Nullam iaculis iaculis
+              tristique. Donec sem orci, convallis in gravida sit amet, pharetra eu nibh.
+            </div>
+          </div>
+          <div class="dish" style="margin-top: 30px;">
+            <div style="background-color: rgb(185, 233, 247);" class="dish-header">
+              <div>
+                <h2><span id="pizza_arrow_down" style="font-size: 32px; cursor: pointer;" class="material-icons">
+                    arrow_drop_down
+                  </span>Chicken Alredo</h2>
+              </div>
+              <div class="price">
+                <h3>$</h3>
+                <h4>22</h4>
+              </div>
+            </div>
+            <div class="pizza-dish">
+              <img style="width: 100%; border-radius: 15px;" src='./img/alfredo.jpg' alt="pazzo pizzeria">
+            </div>
+            <div style="margin-top: 20px; font-family: Comfortaa;">
+              Duis nec pellentesque magna. Suspendisse eu mi sit amet magna dictum lobortis rhoncus aliquam dui. Vestibulum purus
+              nunc, faucibus eget tempus a, aliquet id nibh. Maecenas ultrices faucibus convallis. Proin eu dapibus est. 
             </div>
           </div>
         </div>
-      </div>`
+    </div>`
 
 
   elements.content.insertAdjacentHTML('beforeend', markup);
 
 
-  const pizza = document.querySelector('#pizza_arrow_down');
-  pizza.addEventListener('click', e=> {
-    console.log('pizza arrow down clicked');
+  const dishes = document.querySelectorAll('#pizza_arrow_down');
+
+  dishes.forEach((dish) => {
+    dish.addEventListener('click', e => {
+        dish.textContent = dish.textContent === "arrow_drop_down" ? "arrow_drop_up": "arrow_drop_down";
+
+        let image = dish.parentElement.parentElement.parentElement.parentElement.childNodes[3];
+        
+        image.style.display =
+        image.style.display === "block" ? "none" : "block";
+    });
   });
-  console.log('pizza: ', pizza);
   
 }
 
