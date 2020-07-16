@@ -4,6 +4,7 @@
   - DOM Methods used: `addEventListener`, `querySelector`, `querySelectorAll`, `insertAdjacentHTML`, `classList.add`
   - Dynamically toggled the dish image when the user click on the arrow
   - Used CSS variables to keep track of our overall background color and text color.
+- Compiled using webpack. Deployed on Firebase
 
 ## Geting started with local version
 
