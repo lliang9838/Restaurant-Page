@@ -1,9 +1,7 @@
-import {elements} from './base';
+import { elements } from "./base";
 
-export const  loadHome = () => {
-  
-  const markup=
-  `<div class="body">
+export const loadHome = () => {
+  const markup = `<div class="body">
         <div id="intro">
           <img id="pepperoni" src='./img/pepperoni.jpg' alt="pepperoni pizza">
             <h1 style="margin: auto; text-align: center">Homemade Organic Pepperoni Pizza</h1>
@@ -32,16 +30,14 @@ export const  loadHome = () => {
                 style="background-color: rgb(185, 233, 247); text-decoration: none; color: var(--primary);">@hridaykedia</a>.
             <p>
         </div>
-    </div>`
+    </div>`;
 
-  elements.content.insertAdjacentHTML('beforeend', markup);
-  document.querySelector('.home').classList.add('active-link');
-}
+  elements.content.insertAdjacentHTML("beforeend", markup);
+  document.querySelector(".home").classList.add("active-link");
+};
 
-export const  loadMenu = () => {
-
-  const markup=
-  `<div class="body">
+export const loadMenu = () => {
+  const markup = `<div class="body">
         <div class="menu-section">
           <div class="dish">
             <div style="background-color: rgb(246, 250, 173);" class="dish-header">
@@ -90,7 +86,7 @@ export const  loadMenu = () => {
               <div>
                 <h2><span id="pizza_arrow_down" style="font-size: 32px; cursor: pointer;" class="material-icons">
                     arrow_drop_down
-                  </span>Chicken Alredo</h2>
+                  </span>Chicken Alfredo</h2>
               </div>
               <div class="price">
                 <h3>$</h3>
@@ -106,29 +102,29 @@ export const  loadMenu = () => {
             </div>
           </div>
         </div>
-    </div>`
+    </div>`;
 
+  elements.content.insertAdjacentHTML("beforeend", markup);
 
-  elements.content.insertAdjacentHTML('beforeend', markup);
-
-  const dishes = document.querySelectorAll('#pizza_arrow_down');
+  const dishes = document.querySelectorAll("#pizza_arrow_down");
 
   dishes.forEach((dish) => {
-    dish.addEventListener('click', e => {
-        dish.textContent = dish.textContent === "arrow_drop_down" ? "arrow_drop_up": "arrow_drop_down";
+    dish.addEventListener("click", (e) => {
+      dish.textContent =
+        dish.textContent === "arrow_drop_down"
+          ? "arrow_drop_up"
+          : "arrow_drop_down";
 
-        let image = dish.parentElement.parentElement.parentElement.parentElement.childNodes[3];
-        image.style.display =
-        image.style.display === "block" ? "none" : "block";
+      let image =
+        dish.parentElement.parentElement.parentElement.parentElement
+          .childNodes[3];
+      image.style.display = image.style.display === "block" ? "none" : "block";
     });
   });
-  
-}
+};
 
-export const  loadContact = () => {
-
-  const markup=
-  `
+export const loadContact = () => {
+  const markup = `
   <div class="body">
     <div id="about">
       <div>
@@ -163,7 +159,7 @@ export const  loadContact = () => {
       </div>
     </div>
   </div>
-  `
+  `;
 
-  elements.content.insertAdjacentHTML('beforeend', markup);
-}
+  elements.content.insertAdjacentHTML("beforeend", markup);
+};
